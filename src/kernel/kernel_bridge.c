@@ -8909,8 +8909,8 @@ static void bridge_NtCreateIoCompletion(void)
 /* --- NtCreateTimer (ordinal 194, 3 args = 12 bytes)
  * NTSTATUS NtCreateTimer(PHANDLE TimerHandle, POBJECT_ATTRIBUTES
  *                        ObjectAttributes, TIMER_TYPE TimerType);
- * Creates a manual-reset waitable timer and hands its token out through the
- * handle table, matching the NtCreateEvent/NtCreateMutant pattern. */
+ * Creates a waitable timer of the asked type and hands its token out through
+ * the handle table, matching the NtCreateEvent/NtCreateMutant pattern. */
 static void bridge_NtCreateTimer(void)
 {
     HANDLE h;
